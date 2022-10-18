@@ -111,6 +111,7 @@
 ### files
 
 [Backend Dockerfile](./1.14/Dockerfile.backend)
+
 [Frontend Dockerfile](./1.14/Dockerfile.frontend)
 
 ## 1.15
@@ -120,3 +121,23 @@
 https://devopsdockercoursep.herokuapp.com/
 
 # Part 2
+
+## 2.1
+
+[docker-compose.yml](./2.1/docker-compose.yml)
+
+## 2.2
+
+[docker-compose.yml](./2.2/docker-compose.yml)
+
+## 2.3
+
+[docker-compose.yml](./2.3/docker-compose.yml)
+
+## 2.4
+
+[docker-compose.yml](./2.4/docker-compose.yml)
+
+## 2.5
+
+    docker-compose up --scale compute=3
