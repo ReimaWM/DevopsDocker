@@ -116,6 +116,8 @@
 
 ## 1.15
 
+Skipped for now
+
 ## 1.16
 
 https://devopsdockercoursep.herokuapp.com/
@@ -141,3 +143,32 @@ https://devopsdockercoursep.herokuapp.com/
 ## 2.5
 
     docker-compose up --scale compute=3
+
+## 2.6
+
+[docker-compose.yml](./2.6/docker-compose.yml)
+
+## 2.7
+
+Skipped because of problems with Apple M1 Chip
+
+## 2.8
+
+[docker-compose.yml](./2.8/docker-compose.yml)
+[nginx.conf](./2.8/nginx.conf)
+
+## 2.9
+
+[docker-compose.yml](./2.9/docker-compose.yml)
+
+## 2.10
+
+Removed hardcoded env variables from Dockerfiles and pass them from docker-compose.yml instead, no ports needed since we are using the reverse proxy
+
+[docker-compose.yml](./2.10/docker-compose.yml)
+[backend dockerfile](./2.10/Dockerfile.backend)
+[frontend dockerfile](./2.10/Dockerfile.frontend)
+
+## 2.11
+
+Skipped for now
