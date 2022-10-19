@@ -1,0 +1,19 @@
+FROM golang:1.16.15 AS build-env
+
+WORKDIR /usr/src/app
+
+COPY . .
+
+RUN go test ./...
+
+RUN CGO_ENABLED=0 go build -o server
+
+
+
+FROM scratch
+
+EXPOSE 8080
+
+COPY --from=build-env /usr/src/app/server /server
+
+CMD ["./server"]

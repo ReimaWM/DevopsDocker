@@ -195,8 +195,24 @@ Backend went from 934 MB to 22.9 MB, since i changed from running the build in t
 
 Frontend stayed pretty much the same, did some optimizations, but no real effects since it was already node alpine image. Could have hosted the build with something like nginx:alpine instead of serve to make some real size reduction.
 
+[Files](./3.4/)
+
 ## 3.5
 
 For frontend, i was already using lts-alpine with image size of 445 MB, if i switch the base image to just lts, the size goes to 1.19 GB
 
 Backend was using golang:1.16.15 before 3.4 optimizations with size of 934 MB, with alpine version of golang, it goes down to 440 MB
+
+## 3.6
+
+Did the frontend hosting with nginx alpine image, reducing the image size to 22.4 MB
+
+Backend was basically already setup as multistage, but changed the hosting to use scratch instead of alpine as requested, reducing the final image size to 17.1 MB
+
+[Files](./3.6/)
+
+## 3.7
+
+skipped
+
+## 3.8
