@@ -216,3 +216,7 @@ Backend was basically already setup as multistage, but changed the hosting to us
 skipped
 
 ## 3.8
+
+Did some basic diagram, not really related to any real service
+
+![](./3.8/Kubernetes.drawio.png)
