@@ -1,0 +1,17 @@
+FROM node:lts-alpine
+
+EXPOSE 5000
+
+WORKDIR /usr/src/app
+
+COPY package.json package-lock.json .
+
+RUN npm install -g serve && npm install
+
+COPY . .
+
+RUN npm run build && adduser -D feuser && rm -rf $(ls -A | grep -v build)
+
+USER feuser
+
+CMD ["serve", "-s", "-l", "5000", "build"]

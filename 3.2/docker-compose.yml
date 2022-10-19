@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  builder:
+    build: .
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      # DOCKER USERNAME
+      - DOCKER_USER=
+      # DOCKER PASSWORD / PAT
+      - DOCKER_TOKEN=
+      # GIT Repository you want to build / push
+      - GIT_REPOSITORY=https://github.com/docker-hy/docs-exercise
+      # Image name in dockerhub
+      - IMAGE=

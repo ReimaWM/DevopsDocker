@@ -1,0 +1,27 @@
+FROM golang:1.16.15 AS build-env
+
+WORKDIR /usr/src/app
+
+COPY . .
+
+RUN go test ./...
+
+RUN go build -o server
+
+
+
+FROM alpine
+
+EXPOSE 8080
+
+RUN apk update && apk add ca-certificates gcompat && rm -rf /var/cache/apk/*
+
+WORKDIR /usr/src/app
+
+RUN adduser -D beuser
+
+COPY --from=build-env /usr/src/app/server /usr/src/app/server
+
+USER beuser
+
+CMD ["./server"]

@@ -5,5 +5,5 @@ services:
     image: reimao/youtube-dl
     build: .
     volumes:
-      - .:/mydir
+      - .:/usr/videos
     container_name: youtube-dl

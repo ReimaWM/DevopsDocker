@@ -172,3 +172,31 @@ Removed hardcoded env variables from Dockerfiles and pass them from docker-compo
 ## 2.11
 
 Skipped for now
+
+# Part 3
+
+## 3.1
+
+https://github.com/ReimaWM/coursepage/blob/master/.github/workflows/heroku.yml
+
+## 3.2
+
+[Files](./3.2/)
+
+## 3.3
+
+Basically just added the useradd and USER commands, no permission errors showed up
+
+[Files](./3.3/)
+
+## 3.4
+
+Backend went from 934 MB to 22.9 MB, since i changed from running the build in the golang image to building it there and copying it to alpine image.
+
+Frontend stayed pretty much the same, did some optimizations, but no real effects since it was already node alpine image. Could have hosted the build with something like nginx:alpine instead of serve to make some real size reduction.
+
+## 3.5
+
+For frontend, i was already using lts-alpine with image size of 445 MB, if i switch the base image to just lts, the size goes to 1.19 GB
+
+Backend was using golang:1.16.15 before 3.4 optimizations with size of 934 MB, with alpine version of golang, it goes down to 440 MB
